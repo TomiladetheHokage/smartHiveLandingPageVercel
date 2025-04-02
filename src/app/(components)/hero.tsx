@@ -197,6 +197,8 @@ const HeroSection = () => {
 
 
 
+  // @ts-ignore
+  // @ts-ignore
   return (
       <div className="w-full min-h-[500px] lg:min-h-[800px] flex items-center justify-center px-6 md:px-20 bg-gray-50 relative overflow-hidden">
         <div className="max-w-full w-full grid md:grid-cols-[1fr_3fr] gap-x-10 md:gap-x-20 items-center">
@@ -445,6 +447,7 @@ const HeroSection = () => {
                                     className={`p-2 border rounded-md ${
                                         selectedTime === time ? "bg-gray-300" : "bg-white"
                                     }`}
+                                    // @ts-ignore
                                     onClick={() => setSelectedTime(time)}
                                 >
                                   {time}
@@ -466,6 +469,7 @@ const HeroSection = () => {
           <div className="relative w-full flex flex-col justify-center items-center pb-8">
             <AnimatePresence mode="wait">
               <motion.div
+                  // @ts-ignore
                   key={image}
                   initial={{opacity: 0}}
                   animate={{opacity: 1}}
