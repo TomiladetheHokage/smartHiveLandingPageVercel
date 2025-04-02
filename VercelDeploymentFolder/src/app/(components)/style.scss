@@ -1,0 +1,30 @@
+/* Hide scrollbar for modern browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  scroll-snap-type: x mandatory; // Enable snap scrolling on the x-axis
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.testimonial-card {
+  scroll-snap-align: start; // Snap to the start of the container
+}
+
+.api-image {
+  background-image: url("../../../public/assets/api\ background\ image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.resourses-image {
+  background-image: url("../../../public/assets/resources.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
