@@ -447,9 +447,9 @@ const HeroSection = () => {
                                 <button
                                     key={time}
                                     className={`p-2 border rounded-md ${
-                                        selectedTime === time ? "bg-gray-300" : "bg-white"
+                                        selectedTime === time ? "bg-gray-300" : "bg-black"
                                     }`}
-                                    onClick={() => setSelectedTime(time as string)}
+                                    // onClick={() => setSelectedTime(time as string)}
                                     // onClick={() => setSelectedTime(time)}
                                 >
                                   {time}
