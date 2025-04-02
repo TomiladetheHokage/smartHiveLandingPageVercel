@@ -447,8 +447,8 @@ const HeroSection = () => {
                                     className={`p-2 border rounded-md ${
                                         selectedTime === time ? "bg-gray-300" : "bg-white"
                                     }`}
-                                    // @ts-ignore
-                                    onClick={() => setSelectedTime(time)}
+
+                                    // onClick={() => setSelectedTime(time)}
                                 >
                                   {time}
                                 </button>
@@ -469,8 +469,7 @@ const HeroSection = () => {
           <div className="relative w-full flex flex-col justify-center items-center pb-8">
             <AnimatePresence mode="wait">
               <motion.div
-                  // @ts-ignore
-                  key={image}
+                  // key={image}
                   initial={{opacity: 0}}
                   animate={{opacity: 1}}
                   exit={{opacity: 0}}
