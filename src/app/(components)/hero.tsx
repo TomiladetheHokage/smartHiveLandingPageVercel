@@ -191,7 +191,9 @@ const HeroSection = () => {
 
   const [isNewScheduleOpen, setIsNewScheduleOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] = useState("30 mins");
-  const [selectedTime, setSelectedTime] = useState(null);
+  // const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedTime, setSelectedTime] = useState<null | string>(null);
+
 
 
 
@@ -447,7 +449,7 @@ const HeroSection = () => {
                                     className={`p-2 border rounded-md ${
                                         selectedTime === time ? "bg-gray-300" : "bg-white"
                                     }`}
-
+                                    onClick={() => setSelectedTime(time as string)}
                                     // onClick={() => setSelectedTime(time)}
                                 >
                                   {time}
