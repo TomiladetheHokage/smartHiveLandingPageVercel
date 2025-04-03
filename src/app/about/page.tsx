@@ -30,7 +30,15 @@ import paintBrush from "../../../public/assets/dashicons_admin-customizer.png"
 import note from "../../../public/assets/vscode-icons_file-type-nsri-integrity.png"
 import adobeCreativeCloud from "../../../public/assets/file-icons_adobe-creativecloud.png"
 import peopleImg from "../../../public/assets/people.png"
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
+import {LocateIcon, MessageSquareText, Phone} from "lucide-react";
+import {Separator} from "@/components/ui/separator";
+import {FaFacebookSquare, FaInstagramSquare, FaLinkedin} from "react-icons/fa";
+import {FaSquareXTwitter} from "react-icons/fa6";
+import {AiFillTikTok} from "react-icons/ai";
 
 const coreValues = [
     {
@@ -331,6 +339,98 @@ const AboutPage = () => {
             </section>
 
 
+
+            {/* Bottom Section */}
+            <div className="bg-[#28656A] text-white px-8 md:px-20 py-10 w-full overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+                    {/* Newsletter Subscription */}
+                    <div className="flex flex-col gap-4">
+                        <h3 className="font-semibold text-xl">Be Future-Ready</h3>
+                        <p className="text-gray-300 text-sm w-full max-w-[204px]">
+                            Get exclusive <span className="text-white">SMS</span> updates straight to your inbox
+                        </p>
+                        <div className="flex w-full max-w-xs border border-white rounded-md overflow-hidden">
+                            <Input
+                                type="email"
+                                placeholder="Enter your Email"
+                                className="bg-[#28656A] text-white placeholder:text-white px-4 py-2 w-full rounded-l-md rounded-r-none"
+                            />
+                            <Button className="bg-[#BEF8E4] text-[#043f36] px-4 py-2 rounded-r-md rounded-l-none font-bold
+                      hover:bg-[#BEF8E4] hover:text-[#043f36] active:bg-[#BEF8E4] active:text-[#043f36]">
+                                Subscribe
+                            </Button>
+                        </div>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="flex flex-col items-start text-left">
+                        <ul className="space-y-2 mt-2">
+                            {["About", "Features", "API-DOCS", "PRICING", "CONTACT-US"].map((link) => (
+                                <li key={link}>
+                                    <Link href={`/${link.toLowerCase()}`}
+                                          className="hover:underline text-white font-bold">
+                                        {link}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Support Center */}
+                    <div className="flex flex-col gap-3">
+                        <h3 className="font-semibold text-xl">Support Centre</h3>
+                        <div className="flex gap-2 items-center text-sm">
+                            <Phone size={16}/>
+                            <span className="text-gray-300">+234 902 423 2473</span>
+                        </div>
+                        <div className="flex gap-2 items-center text-sm">
+                            <MessageSquareText size={16}/>
+                            <span className="text-gray-300">support@smarthivetechsolution.com</span>
+                        </div>
+                        <div className="flex gap-2 items-center text-sm">
+                            <LocateIcon size={16}/>
+                            <span className="text-gray-300">Lagos, Nigeria.</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <Separator className="mt-28 mb-6 border-gray-500"/>
+
+                {/* Bottom Section: Copyright & Socials */}
+                <div className="flex flex-col text-sm md:flex-row md:justify-between md:items-center">
+
+                    {/* Privacy Policy & Terms (Left-Aligned) */}
+                    <div className="flex flex-col items-start gap-1">
+                        <Link href={"/privacy-policy"} className="hover:underline mb-4">Privacy Policy</Link>
+                        <Link href={""} className="hover:underline mb-8">Terms of Service</Link>
+                    </div>
+
+                    {/* Social Media Icons (Wrapped) */}
+                    <div className="flex flex-wrap gap-4 text-xl pb-8">
+                        <Link href={""}>
+                            <FaFacebookSquare/>
+                        </Link>
+                        <Link href={""}>
+                            <FaSquareXTwitter/>
+                        </Link>
+                        <Link href={""}>
+                            <FaLinkedin/>
+                        </Link>
+                        <Link href={""}>
+                            <AiFillTikTok/>
+                        </Link>
+                        <Link href={""}>
+                            <FaInstagramSquare/>
+                        </Link>
+                    </div>
+
+                    {/* Copyright Text */}
+                    <p className="mt-8 text-center w-full md:w-auto md:text-right">
+                        &copy; 2024 Smarthive SMS. All rights reserved
+                    </p>
+                </div>
+            </div>
         </div>
     );
 };

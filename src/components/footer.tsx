@@ -185,7 +185,7 @@ hover:bg-[#28656A] hover:text-white active:bg-[#28656A] active:text-white">
             {/* Quick Links */}
             <div className="flex flex-col items-start text-left">
               <ul className="space-y-2 mt-2">
-                {["About", "Features", "API-DOCS", "PRICING", "CONTACT-US"].map((link) => (
+                {["ABOUT", "FEATURES", "API-DOCS", "PRICING", "CONTACT-US"].map((link) => (
                     <li key={link}>
                       <Link href={`/${link.toLowerCase()}`} className="hover:underline text-white font-bold">
                       {link}
