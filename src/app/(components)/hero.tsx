@@ -67,7 +67,9 @@ const HeroSection = () => {
   const [isNewScheduleOpen, setIsNewScheduleOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] = useState("30 mins");
   // const [selectedTime, setSelectedTime] = useState(null);
-  const [selectedTime, setSelectedTime] = useState<null | string>(null);
+//  const [selectedTime, setSelectedTime] = useState<null | string>(null);
+    const [selectedTime, setSelectedTime] = useState<string | null>(null);
+
 
   return (
       <div className="w-full min-h-[500px] lg:min-h-[800px] flex items-center justify-center px-6 md:px-20 bg-gray-50 relative overflow-hidden">
@@ -315,10 +317,11 @@ const HeroSection = () => {
                                 <button
                                     key={time}
                                     className={`p-2 border rounded-md ${
-                                        selectedTime === time ? "bg-gray-300" : "bg-black"
+                                        selectedTime === time ? "bg-gray-300" : "bg-white"
                                     }`}
                                     // onClick={() => setSelectedTime(time as string)}
                                     // onClick={() => setSelectedTime(time)}
+                                    onClick={() => setSelectedTime(String(time))}
                                 >
                                   {time}
                                 </button>
@@ -339,7 +342,7 @@ const HeroSection = () => {
           <div className="relative w-full flex flex-col justify-center items-center pb-8">
             <AnimatePresence mode="wait">
               <motion.div
-                  // key={image}
+                  key={image.src} // assuming image is of type StaticImageData
                   initial={{opacity: 0}}
                   animate={{opacity: 1}}
                   exit={{opacity: 0}}

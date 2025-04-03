@@ -148,9 +148,11 @@ const NavItem = ({href, children}) => (
 // };
 
 // @ts-ignore
-const DropdownItem = ({ label, subItems }) => {
+const DropdownItem = ({ label, subItems = [] }: { label: string; subItems?: string[] }) => {
+
     const [open, setOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
 
     // Close dropdown when clicking outside
     useEffect(() => {
