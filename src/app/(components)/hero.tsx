@@ -1,128 +1,3 @@
-// "use client"
-//
-// import Image from "next/image";
-// import { Button } from "../../components/ui/button";
-// import { hero2, hero3, hero4, heroImage1 } from "../../../public/assets";
-// import { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import Link from "next/link";
-//
-// const slideShowdata = [
-//   {
-//     title: "Instant, Reliable Communication for Your Business.",
-//     description:
-//       "Engage customers effectively with SmarthiveSMS-your for seamless, cost effective messaging solution.",
-//     image: heroImage1
-//   },
-//   {
-//     title: "Voice SMS",
-//     description:
-//       "Deliver your message with a personal touch through automated SMS solutions to enhance customer engagement.",
-//     image: hero2
-//   },
-//   {
-//     title: "OTP",
-//     description:
-//       "Ensure secure, real-time transactions with fast, reliable One-Time Password (OTP) delivery every time.",
-//     image: hero3
-//   },
-//   {
-//     title: "USSD",
-//     description:
-//       "Enable easy, internet-free interactions with customers through intuitive USSD service Options.",
-//     image: hero4
-//   },
-// ]
-//
-// const HeroSection = () => {
-//   const [currentSlide, setCurrentSlide] = useState(0);
-//
-//   // Automatically switch slides every 5 seconds
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentSlide((prevSlide) => (prevSlide + 1) % slideShowdata.length);
-//     }, 5000);
-//     return () => clearInterval(interval);
-//   }, []);
-//
-//   const { title, description, image } = slideShowdata[currentSlide];
-//
-//   // Animation variants for text and image
-//   const textVariants = {
-//     enter: { x: "100%", opacity: 0 },
-//     center: { x: 0, opacity: 1 },
-//     exit: { x: "-100%", opacity: 0 }
-//   };
-//
-//   const imageVariants = {
-//     fadeIn: { opacity: 0 },
-//     visible: { opacity: 1 },
-//     fadeOut: { opacity: 0 }
-//   };
-//
-//
-//   return (
-//     <div className="w-full h-[450px] md:h-screen relative overflow-hidden">
-//       <div className="bg-black absolute h-full w-full top-0 bg-opacity-50 flex justify-center md:p-20 p-5 flex-col text-white z-0">
-//         <AnimatePresence mode="wait">
-//           <motion.div
-//             key={currentSlide}
-//             className="lg:max-w-[50%] md:max-w-[60%] flex gap-4 flex-col"
-//             initial="enter"
-//             animate="center"
-//             exit="exit"
-//             variants={textVariants}
-//             transition={{ duration: 0.5 }}
-//           >
-//             <h1 className="md:text-5xl text-3xl font-semibold">{title}</h1>
-//             <p className="md:text-base text-sm">{description}</p>
-//             <Link href={"https://app.smarthivesms.com/signup"}>
-//               <Button className="w-32">Get Started</Button>
-//             </Link>
-//           </motion.div>
-//         </AnimatePresence>
-//       </div>
-//
-//       <AnimatePresence mode="wait">
-//         <motion.div
-//           key={image.src}
-//           initial="fadeIn"
-//           animate="visible"
-//           exit="fadeOut"
-//           variants={imageVariants}
-//           transition={{ duration: 1 }}
-//           className="absolute top-0 h-[450px] md:h-screen w-full -z-10"
-//         >
-//           <Image
-//             src={image}
-//             alt={title}
-//             quality={100}
-//             priority={true}
-//             className="h-full w-full object-cover"
-//           />
-//         </motion.div>
-//       </AnimatePresence>
-//
-//       {/* Navigation Dots */}
-//       <div className="absolute bottom-4 flex justify-center items-center gap-2 w-full">
-//         {slideShowdata.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => setCurrentSlide(index)}
-//             className={`w-2 h-2 rounded-full ${index === currentSlide ? "bg-white w-6" : "bg-gray-400"
-//               }`}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-//
-// export default HeroSection;
-
-
-//NEW DESIGN
-
 "use client";
 
 import Image from "next/image";
@@ -194,13 +69,6 @@ const HeroSection = () => {
   // const [selectedTime, setSelectedTime] = useState(null);
   const [selectedTime, setSelectedTime] = useState<null | string>(null);
 
-
-
-
-
-
-  // @ts-ignore
-  // @ts-ignore
   return (
       <div className="w-full min-h-[500px] lg:min-h-[800px] flex items-center justify-center px-6 md:px-20 bg-gray-50 relative overflow-hidden">
         <div className="max-w-full w-full grid md:grid-cols-[1fr_3fr] gap-x-10 md:gap-x-20 items-center">
@@ -230,15 +98,15 @@ const HeroSection = () => {
                 </Button>
               </Link>
               <div>
-                {/* Request a Demo Button */}
-        {/*        <Button*/}
-        {/*            variant="outline"*/}
-        {/*            className="border-2 border-[#28656A] text-black font-bold px-6 py-2*/}
-        {/*rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"*/}
-        {/*            onClick={() => setIsOpen(true)}*/}
-        {/*        >*/}
-        {/*          Request a Demo*/}
-        {/*        </Button>*/}
+                 {/*Request a Demo Button */}
+                <Button
+                    variant="outline"
+                    className="border-2 border-[#28656A] text-black font-bold px-6 py-2
+        rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
+                    onClick={() => setIsOpen(true)}
+                >
+                  Request a Demo
+                </Button>
 
 
 
