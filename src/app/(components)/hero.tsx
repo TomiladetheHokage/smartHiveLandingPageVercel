@@ -231,14 +231,14 @@ const HeroSection = () => {
               </Link>
               <div>
                 {/* Request a Demo Button */}
-                <Button
-                    variant="outline"
-                    className="border-2 border-[#28656A] text-black font-bold px-6 py-2
-        rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
-                    onClick={() => setIsOpen(true)}
-                >
-                  Request a Demo
-                </Button>
+        {/*        <Button*/}
+        {/*            variant="outline"*/}
+        {/*            className="border-2 border-[#28656A] text-black font-bold px-6 py-2*/}
+        {/*rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"*/}
+        {/*            onClick={() => setIsOpen(true)}*/}
+        {/*        >*/}
+        {/*          Request a Demo*/}
+        {/*        </Button>*/}
 
 
 
