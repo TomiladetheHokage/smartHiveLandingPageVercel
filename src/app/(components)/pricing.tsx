@@ -31,7 +31,8 @@ const Pricing = () => {
             {/* Title Section */}
             <TitleHeading
                 title="Pricing"
-                description="Pay only for what you use with straightforward billing. Our pricing model is straightforward and transparent. Credit card is not required also there is no hidden fees or complicated packages."
+                description="Pay only for what you use with straightforward billing.
+                Our pricing model is straightforward and transparent. Credit card is not required also there is no hidden fees or complicated packages."
             />
 
             {/* Pricing Cards */}

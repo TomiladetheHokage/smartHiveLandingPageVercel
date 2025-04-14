@@ -227,7 +227,7 @@ const TestimonialCard = ({ data }: { data: testimonialType }) => {
   return (
       <motion.div
           whileHover={{ scaleY: 1.05, scaleX: 1.02 }}
-          className="relative min-w-full md:min-w-[327.15px] h-[358px] rounded-xl overflow-hidden border border-gray-300"
+          className="relative min-w-full md:min-w-[450px]  md:min-h-[450px] h-[358px] rounded-xl overflow-hidden border border-gray-300"
       >
         {/* Green Background */}
         <div className="absolute inset-0 bg-[#28656A] rounded-xl"></div>
@@ -238,7 +238,7 @@ const TestimonialCard = ({ data }: { data: testimonialType }) => {
           <p className="text-2xl text-black font-bold absolute top-6 left-6">&#x275D;</p>
 
           {/* Testimonial Text */}
-          <p className="text-center text-gray-800 italic text-sm leading-relaxed">
+          <p className="text-center text-gray-800 italic text-sm md:text-2xl leading-relaxed">
             {data.description}
           </p>
 

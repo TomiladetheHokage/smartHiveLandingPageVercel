@@ -51,7 +51,7 @@ const HeroSection = () => {
     if (!isMobile) {
       const interval = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slideShowdata.length);
-      }, 5000);
+      }, 7000);
       return () => clearInterval(interval);
     } else {
       setCurrentSlide(0); // Always show first image on mobile
@@ -66,9 +66,7 @@ const HeroSection = () => {
 
   const [isNewScheduleOpen, setIsNewScheduleOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] = useState("30 mins");
-  // const [selectedTime, setSelectedTime] = useState(null);
-//  const [selectedTime, setSelectedTime] = useState<null | string>(null);
-    const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
 
   return (

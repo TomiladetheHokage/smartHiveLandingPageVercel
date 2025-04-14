@@ -36,8 +36,8 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-x-16 text-white text-[16px] leading-[24px] font-medium">
                 <NavItem href="/about">About</NavItem>
-                <DropdownItem label="Products"/>
-                <DropdownItem label="Features" subItems={["SMS", "Voice", "Email", "WhatsApp-Messaging"]}/>
+                {/*<DropdownItem label="Products"/>*/}
+                <DropdownItem label="Products" subItems={["SMS", "Voice-messaging", "Email", "WhatsApp-Messaging"]}/>
                 <NavItem href="/api-docs">For Developer</NavItem>
                 <NavItem href="/pricing">Pricing</NavItem>
                 <DropdownItem label="Resources"/>

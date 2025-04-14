@@ -14,7 +14,7 @@ export default function RootTemplate({
   const pathname = usePathname(); // Get the current route
 
   // Define pages where the footer should be hidden
-  const hideFooterPages = ["/sms", "/voice-messaging", "/whatsapp-messaging", "/email", "/about"];
+  const hideFooterPages = ["/sms", "/voice-messaging", "/whatsapp-messaging", "/email", "/about", "/pricing"];
 
   useEffect(() => {
     const handleScroll = () => {

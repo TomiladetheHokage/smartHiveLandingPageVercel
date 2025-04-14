@@ -115,10 +115,10 @@ const AboutPage = () => {
             {/* Header Section */}
             <div className="relative bg-[#E2F5EE] text-center w-screen  py-10">
                 {/* Heading Section */}
-                <h2 className="text-[22px] md:text-3xl font-bold text-primary font-poltawski mt-20 md:mt-40 md:mb-10">
+                <h2 className="text-[22px] md:text-4xl font-bold text-primary font-poltawski mt-20 md:mt-40 md:mb-10">
                     OUR <span className="text-[#F4A261]">REASON</span> FOR EXISTENCE
                 </h2>
-                <p className="text-[14px] md:text-[17px] text-gray-600 mt-2 max-w-[1065px] mx-auto mb-20">
+                <p className="text-[14px] md:text-2xl text-gray-600 mt-2 max-w-[1065px] mx-auto mb-20">
                     At SmarthiveSMS, we exist to break down communication barriers. We were born in Lagos, Nigeria, and
                     built
                     for Africa. We empower businesses to connect with customers through reliable, affordable SMS,
@@ -165,18 +165,18 @@ const AboutPage = () => {
 
                 <div className="max-w-7xl w-full px-6 md:mt-20 mt-10 md:ml-20 md:pl-16 lg:pl-52">
                     <h3 className="text-lg md:text-2xl font-bold">About Us</h3>
-                    <p className="text-[15px] text-gray-600 leading-7 mt-2 ">
+                    <p className="text-[15px]  text-gray-600 leading-7 mt-2 "> {/* md:text-2xl*/}
                         <span className="font-bold">SmarthiveSMS</span> is a leading provider of Bulk SMS and WhatsApp
                         marketing solutions, enabling
                         marketing agencies
                         to execute high-impact communication campaigns for their clients.
                     </p>
-                    <p className="text-[15px] text-gray-600 leading-7 mt-3 ">
+                    <p className="text-[15px] text-gray-600 leading-7 mt-3 ">  {/* md:text-2xl*/}
                         We understand the challenges marketing agencies face, juggling multiple campaigns, managing
                         diverse
                         communication channels, and creating personalized messaging that drives engagement.
                     </p>
-                    <p className="text-[15px] text-gray-600 leading-7 mt-3">
+                    <p className="text-[15px] text-gray-600 leading-7 mt-3"> {/* md:text-2xl*/}
                         Our platform simplifies the process, offering a cost-effective, time-saving, and secure solution
                         for mass
                         communication that ensures high delivery rates and maximized audience engagement for your

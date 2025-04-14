@@ -42,7 +42,7 @@ const TitleHeading = ({ title, description, align = "center" }: TitleHeadingProp
         <div className="w-full  pt-6">
             <div className={`flex flex-col gap-0 text-${align} items-${align} transform -translate-y-2`}>
                 <h1 className="text-[22px] md:text-5xl font-bold  font-poltawski">{title}</h1>
-                <p className="text-[14px] w-[330px] md:w-[603px] md:leading-[24px] md:mt-2 md:text-[16px]">{description}</p>
+                <p className="text-[14px] w-[330px] md:w-[603px] md:leading-[32px] md:mt-2 md:text-[16px]">{description}</p>
                 {/*<p className="font-light text-[14px] md:text-[18px] md:w-[650px]  !md:font-[300] ">{description}</p>*/}
             </div>
         </div>

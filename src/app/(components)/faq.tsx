@@ -52,18 +52,18 @@ const FAQ = () => {
   return (
       <div className="mt-[0px] pt-20  lg:px-20 md:px-10 p-5 md:py-10 text-left flex flex-col items-start bg-[#f8f8f8] pb-24 md:pb-32">
         <h1 className="text-left text-2xl md:text-4xl font-bold font-poltawski">Frequently Asked Questions</h1>
-        <div className="w-full mt-8 flex flex-col items-start gap-10">  {/* Changed items-center to items-start */}
+        <div className="w-full mt-8 flex flex-col items-start gap-10">
 
-          <div className="md:w-[90%] lg:w-[95%] w-full text-left flex flex-col items-start space-y-8">
+          <div className="md:w-[90%] lg:w-[95%] w-full text-left text-semibold flex flex-col items-start space-y-8">
             <Accordion type="single" collapsible className="w-full">
               {data.map((item, index) => (
                   <AccordionItem value={index.toString()} key={index}>
                     <AccordionTrigger
-                        className="w-full text-left border-b border-black [&>svg]:rotate-0 [&>svg]:text-[#28656A] [&[data-state=open]>svg]:rotate-180"
+                        className="w-full text-left font-bold border-b border-black [&>svg]:rotate-0 [&>svg]:text-[#28656A] [&[data-state=open]>svg]:rotate-180"
                     >
                       {item.title}
                     </AccordionTrigger>
-                    <AccordionContent className="text-left mt-2">{item.content}</AccordionContent>
+                    <AccordionContent className="text-left text-semibold mt-2">{item.content}</AccordionContent>
                   </AccordionItem>
               ))}
             </Accordion>
