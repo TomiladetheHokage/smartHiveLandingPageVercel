@@ -91,7 +91,7 @@ const HeroSection = () => {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex flex-wrap gap-4 mt-6">
-              <Link href="https://app.smarthivesms.com/signup">
+              <Link href="/about">
                 <Button className="bg-[#28656A] text-white px-6 py-5 active:bg-[#28656A] active:text-white
       hover:bg-[#28656A] hover:text-white rounded-xl transition-transform duration-300 ease-in-out hover:scale-105">
                   Learn More
@@ -136,7 +136,7 @@ const HeroSection = () => {
 
             {/* Mobile Buttons */}
             <div className="flex flex-wrap gap-4 justify-center mt-4 md:hidden">
-              <Link href="https://app.smarthivesms.com/signup">
+              <Link href="/about">
                 <Button className="bg-[#28656A] text-white px-6 py-5 active:bg-[#28656A] active:text-white
       hover:bg-[#28656A] hover:text-white rounded-xl transition-transform duration-300 ease-in-out hover:scale-105">
                   Learn More

@@ -37,10 +37,20 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
             <div className="hidden md:flex items-center gap-x-16 text-white text-[16px] leading-[24px] font-medium">
                 <NavItem href="/about">About</NavItem>
                 {/*<DropdownItem label="Products"/>*/}
-                <DropdownItem label="Products" subItems={["SMS", "Voice-messaging", "Email", "WhatsApp-Messaging"]}/>
+                <DropdownItem
+                    label="Products"
+                    subItems={[
+                        { label: "SMS" },
+                        { label: "Voice-messaging" },
+                        { label: "Email" },
+                        { label: "WhatsApp-Messaging" },
+                    ]}
+                />
+
                 <NavItem href="/api-docs">For Developer</NavItem>
                 <NavItem href="/pricing">Pricing</NavItem>
-                <DropdownItem label="Resources"/>
+                <DropdownItem label="Resources" subItems={[{ label: "FAQ", href: "#faq" }]} />
+
             </div>
 
             <Link href="https://app.smarthivesms.com/SignIn">
@@ -74,11 +84,21 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
                     <div className="mt-8 flex flex-col gap-4 gap-y-6 ml-6">
                         <NavItem href="/">Home</NavItem>
                         <NavItem href="/about">About</NavItem>
-                        <DropdownItem label="Products" />
+                        {/*<DropdownItem label="Products" />*/}
                         <NavItem href="/support-center">API</NavItem>
                         <NavItem href="/pricing">Pricing</NavItem>
-                        <DropdownItem label="Resources" />
-                        <DropdownItem label="Features" subItems={["SMS", "Voice-messaging", "Email", "WhatsApp Messaging"]}/>
+                        <DropdownItem label="Resources" subItems={[{ label: "FAQ", href: "#faq" }]} />
+
+                        <DropdownItem
+                            label="Products"
+                            subItems={[
+                                { label: "SMS" },
+                                { label: "Voice-messaging" },
+                                { label: "Email" },
+                                { label: "WhatsApp-Messaging" },
+                            ]}
+                        />
+
                     </div>
 
                     {/* Buttons */}
@@ -148,25 +168,25 @@ const NavItem = ({href, children}) => (
 // };
 
 // @ts-ignore
-const DropdownItem = ({ label, subItems = [] }: { label: string; subItems?: string[] }) => {
-
+const DropdownItem = ({
+                          label,
+                          subItems = [],
+                      }: {
+    label: string;
+    subItems?: { label: string; href?: string }[];
+}) => {
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-
-    // Close dropdown when clicking outside
     useEffect(() => {
-        // @ts-ignore
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setOpen(false);
             }
         };
 
         document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     return (
@@ -180,15 +200,15 @@ const DropdownItem = ({ label, subItems = [] }: { label: string; subItems?: stri
             </div>
 
             {open && subItems && (
-                <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-md py-2">
+                <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-md py-2 z-50">
                     {subItems.map((item, index) => (
                         <Link
                             key={index}
-                            href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                            href={item.href || `/${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                             className="block px-4 py-2 hover:bg-gray-100"
-                            onClick={() => setOpen(false)} // Close dropdown on selection
+                            onClick={() => setOpen(false)}
                         >
-                            {item}
+                            {item.label}
                         </Link>
                     ))}
                 </div>
@@ -196,6 +216,7 @@ const DropdownItem = ({ label, subItems = [] }: { label: string; subItems?: stri
         </div>
     );
 };
+
 
 export default NavBar;
 

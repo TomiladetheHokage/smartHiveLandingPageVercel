@@ -298,10 +298,14 @@ const Pricong = () => {
                     </p>
 
                     <div className="flex justify-center gap-3 mt-6 md:pb-0 md:mt-32 flex-wrap sm:flex-nowrap">
-                        <Button
-                            className="bg-[#28656A] text-white px-5 md:px-8 py-2 rounded-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#28656A] hover:text-white active:bg-[#28656A] active:text-white w-[160px] sm:w-auto">
-                            Get started for free
-                        </Button>
+                        <Link href="https://app.smarthivesms.com/signup">
+                            <Button
+                                className="bg-[#28656A] text-white px-5 md:px-8 py-2 rounded-lg font-bold
+    transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#28656A] hover:text-white active:bg-[#28656A]
+    active:text-white w-[160px] sm:w-auto">
+                                Get started for free
+                            </Button>
+                        </Link>
 
                         <Button variant="outline"  onClick={() => setIsDemoOpen(true)}
                                 className="border-2 border-[#28656A] bg-white text-black font-bold px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 w-[160px] sm:w-auto">

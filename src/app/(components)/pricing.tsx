@@ -62,7 +62,7 @@ const Pricing = () => {
 
             {/* Button Section */}
             <div className="mt-10 flex justify-center">
-                <Link href="https://app.smarthivesms.com/signup">
+                <Link href="/pricing">
                     <Button className="bg-[#28656A] hover:bg-[#28656A] px-6 py-3 text-white rounded-full text-sm
                     transition-transform duration-300 ease-in-out hover:scale-105">
                         Learn More

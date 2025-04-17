@@ -153,10 +153,12 @@ const Footer = () => {
             Join 5,000+ businesses using SmarthiveSMS for reliable, affordable messaging solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-6 md:pb-0">
-            <Button className="bg-[#28656A] text-white md:px-8 px-6 py-2 rounded-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105
+            <Link href="https://app.smarthivesms.com/signup">
+              <Button className="bg-[#28656A] text-white md:px-8 px-6 py-2 rounded-lg font-bold transition-transform duration-300 ease-in-out hover:scale-105
 hover:bg-[#28656A] hover:text-white active:bg-[#28656A] active:text-white">
-              Start Free Trial
-            </Button>
+                Start Free Trial
+              </Button>
+            </Link>
 
             <Button variant="outline" onClick={() => setIsDemoOpen(true)} className="border-2 border-[#28656A] bg-[#E2F5EE] text-black font-bold px-6 py-2
     rounded-xl transition-transform duration-300 ease-in-out hover:scale-105">
@@ -196,7 +198,7 @@ hover:bg-[#28656A] hover:text-white active:bg-[#28656A] active:text-white">
             {/* Quick Links */}
             <div className="flex flex-col items-start text-left">
               <ul className="space-y-2 mt-2">
-                {["ABOUT", "FEATURES", "API-DOCS", "PRICING", "CONTACT-US"].map((link) => (
+                {["ABOUT", "API-DOCS", "PRICING", "CONTACT-US"].map((link) => (
                     <li key={link}>
                       <Link href={`/${link.toLowerCase()}`} className="hover:underline text-white font-bold">
                       {link}
