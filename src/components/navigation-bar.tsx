@@ -87,7 +87,10 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
                         {/*<DropdownItem label="Products" />*/}
                         <NavItem href="/support-center">API</NavItem>
                         <NavItem href="/pricing">Pricing</NavItem>
-                        <DropdownItem label="Resources" subItems={[{ label: "FAQ", href: "#faq" }]} />
+                        <DropdownItem label="Resources" subItems={[
+                            { label: "FAQ", href: "#faq" },
+                            { label: "CONTACT US", href: "/contact-us" },
+                        ]} />
 
                         <DropdownItem
                             label="Products"
